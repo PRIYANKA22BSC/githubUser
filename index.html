@@ -48,30 +48,33 @@
             justify-content: space-between;
             width: 80%;
             margin-top: 100px;
-        }
-
-        .mainDiv::-webkit-scrollbar{
-            display: none;
+            gap: 20px;
         }
 
         .left {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 25%;
+            width: 30%;
             background-color: #1e1e1e;
             padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 0 2px #fff;
         }
 
         .profilePic img {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
         }
 
+        #userName{
+            font-size: 28px;
+            color: #1db954 ;
+        }
+
         .mid, .right {
-            width: 35%;
+            width: 30%;
             background-color: #1e1e1e;
             box-shadow: 0 0 2px #fff;
             padding: 20px;
@@ -79,7 +82,8 @@
             height: 70vh;
             overflow: scroll;
         }
-         
+
+        
         .mid::-webkit-scrollbar, .right::-webkit-scrollbar{
             display: none;
         }
@@ -100,6 +104,11 @@
             color: #1db954;
             text-decoration: none;
         }
+
+        .followFollwing{
+            display: flex;
+            gap: 20px;
+        }
     </style>
 </head>
 <body>
@@ -114,8 +123,10 @@
             <h3 id="userName"></h3>
             <p id="userBio"></p>
             <p><strong>Location:</strong> <span id="userLocation"></span></p>
-            <p><strong>Followers:</strong> <span id="userFollowers"></span></p>
+            <div class="followFollwing">
+                <p><strong>Followers:</strong> <span id="userFollowers"></span></p>
             <p><strong>Following:</strong> <span id="userFollowing"></span></p>
+            </div>
         </div>
         
         <div class="mid">
